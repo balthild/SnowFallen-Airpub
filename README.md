@@ -1,8 +1,6 @@
 # SnowFallen theme for Airpub
 
-由 [Kirainmoe](https://ww.imim.pw) 设计，[Baa
-lthild](https://qaq.cat) 移植至 [Airpub](httt
-p://airpub.io).
+由 [Kirainmoe](https://ww.imim.pw) 设计，[Balthild](https://qaq.cat) 移植至 [Airpub](http://airpub.io).
 
 由于平台限制和考虑轻便性，移植过程精简了不少原主题的功能
 

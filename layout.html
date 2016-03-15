@@ -1,0 +1,76 @@
+<div id="frame">
+	<div id="head-menu-bg"></div>
+	<div id="head-menu">
+		<div id="menu-container" class="clearfix">
+			<div class="right" >
+				<a class="link" href="javascript:;" id="signin-btn" ng-show="!user.name" ng-click="toggleSigninSection();" tooltip-placement="left" tooltip="登录" ng-cloak><i class="fa fa-sign-in"></i></a>
+				<a class="link-avatar" ui-sref="layout.create" ng-show="user.name" ng-cloak>
+					<img ng-src="{{user.avatar_url}}" alt="{{user.name}}" class="top-avatar" />
+				</a>
+			</div>
+			<div collapse="hiddenSigninSection" class="right signin-section" ng-cloak>
+				<a class="link" ng-href="http://duoshuo.com/login/weibo?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-weibo"></i></a>
+				<a class="link" ng-href="http://duoshuo.com/login/qq?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-qq"></i></a>
+				<a class="link" ng-href="http://duoshuo.com/login/weixin?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-weixin"></i></a>
+				<a class="link" ng-href="http://duoshuo.com/login/renren?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-renren"></i></a>
+				<a class="link" ng-href="http://duoshuo.com/login/google?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-google-plus"></i></a>
+				<a class="link" ng-href="http://duoshuo.com/login?redirect_uri={{location.$$absUrl}}" ng-cloak><i class="fa fa-ellipsis-h"></i></a>
+
+			</div>
+			<div class="left">
+				<a class="title" ui-sref="layout.home"><i class="fa fa-home"></i> {{configs.name}}</a>
+			</div>
+			<!--<div class="to-top" onclick="ScrollToControl('pjax-container');">
+				<p style="text-align:center;"></p>
+			</div>-->
+		</div>
+	</div><!-- #head-menu.banner-notfade -->
+	
+	<div id="pjax-container">
+
+		<div class="banner" id="banner">
+			<div class="banner-text">
+				<div class="banner-container">
+					<div class="banner-border-top"></div>
+					<h1 id="big-title">{{configs.name}}</h1>
+					<h3 id="big-description">{{configs.description}}</h3>
+					<div class="banner-border-bottom"></div>
+				</div>
+			</div>
+			<!--<a href="javascript:void(0);" class="go-down scroll" onclick="ScrollToControl('divider');"><i class="fa fa-angle-double-down"></i></a>-->
+		</div><!-- .banner -->
+		<div id="divider"></div>
+		
+		<div id="content" class="container">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div ui-view>
+						<div class="loading">Loading...</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div><!-- #content -->
+		
+		<div class="footer container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-5">
+					<div class="copyright-left">
+						<p style="font-size: 14px;">&copy; <span class="copyright-year" ng-bind="copyrightYear"></span> {{configs.name}}. CC BY-NC-SA Unported 4.0</p>
+						<a href="https://github.com/s-kias" rel="nofollow"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-7">
+					<div class="copyright-right">
+						<p>Powered by <a href="http://github.com/duoshuo/airpub" target="_blank">Airpub</a>.</p>
+						<p>Theme SnowFallen designed by <a href="http://www.imim.pw" target="_blank">Kirainmoe</a> with ♥</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .footer -->
+
+	</div><!-- #pjax-container -->
+</div><!-- #frame -->
+	
+</div>

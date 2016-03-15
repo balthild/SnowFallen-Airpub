@@ -1,0 +1,26 @@
+<div id="admin" ng-show="isAdmin" ng-cloak>
+	<!-- the editor -->
+	<div class="row">
+		<div class="col-md-12">
+			<form name="articleForm" role="form" ng-submit="updateArticle(article.thread_id)">
+				<div class="form-group title-group">
+					<input type="text" ng-model="article.title" class="form-control" placeholder="文章标题" required>
+				</div>
+				<div id="core-editor" class="editor-wrapper clearfix">
+					<editor-ninja ng-model="article.content"></editor-ninja>
+					<button class="submit btn btn-block" type="submit">写好了</button>
+					<a class="remove btn btn-block btn-danger" ng-show="article.thread_id" ng-click="removeArticle(article.thread_id)" ng-cloak>删除这篇文章</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- add-on directives -->
+	<div class="row">
+		<div class="col-md-12">
+			<div id="add-ons" class="add-ons clearfix">
+				<!-- <div meta-share ng-model="article.meta.share"></div> -->
+				<div meta-background ng-model="article.meta.background"></div>
+			</div>
+		</div>
+	</div>
+</div>

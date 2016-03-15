@@ -1,0 +1,24 @@
+<div id="art-container">
+	<div class="article-body clearfix" ng-repeat="article in articles" ng-hide="article.title == ''" ng-class="{'has-thumbnail': article.meta.background}">
+		<div class="article-tag clearfix">
+			<div class="article-title">
+				<h2><a ui-sref="layout.single({uri: article.thread_id })" ng-bind="article.title"></a></h2>
+				<div class="link-border"></div>
+			</div>
+			<div class="article-info">
+				<p class="pubdate"><i class="fa fa-calendar"></i> <span ng-bind="article.created_at | date: 'yyyy/MM/dd h:mm a'"></span></p>
+			</div>
+		</div>
+		<div class="article-thumbnail clearfix" ng-hide="article.meta.background">
+			<img ng-src="{{article.meta.background || configs.themePath + '/' + configs.theme + '/img/thumbnail/[imgIdLoop].jpg' | imgIdLoop}}" />
+			<!--<img ng-src="{{article.meta.background}}" />-->
+		</div>
+		<div class="article-content clearfix" ng-bind-html="article.content"></div>
+	</div>
+</div>
+
+<div class="page-navigation clearfix">
+	<pager previous-text="前几篇" next-text="后几篇" total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage" ng-change="pageChanged()"></pager>
+</div>
+
+<div class="loading" ng-hide="articles.length >= 0">Loading...</div>

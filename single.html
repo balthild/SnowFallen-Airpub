@@ -1,0 +1,22 @@
+<div id="art-container">
+	<div class="article-body clearfix">
+		<div class="article-tag clearfix">
+			<div class="article-title">
+				<h2><a ng-bind="article.title"></a></h2>
+				<div class="link-border"></div>
+			</div>
+			<div class="article-info">
+				<span class="pubdate">
+					<i class="fa fa-calendar"></i> <span ng-bind="article.created_at | date: 'yyyy/MM/dd h:mm a'"></span>
+				</span>
+				<span class="options" ng-show="article.title && (user.user_id === author.user_id)" ng-cloak>
+	            	<a class="edit option" ui-sref="layout.update({uri: article.thread_id})">编辑</a>
+				</span>
+			</div>
+		</div>
+		<div class="article-content clearfix" ng-bind-html="article.content | marked"></div>
+		<div id="comments">
+			<div ds-thread data-thread-id="{{threadId}}"></div>
+		</div>
+	</div>
+</div>

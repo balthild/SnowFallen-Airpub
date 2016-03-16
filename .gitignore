@@ -3,8 +3,6 @@ thumb
 node_modules
 *.sublime*
 *.log
-bower_*
-configs.js
 editor
 csrf*
 dist/*-bootstrap.min.css

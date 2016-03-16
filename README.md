@@ -6,7 +6,7 @@
 
 ## 使用方法
 
-1 把主题文件夹放进 bower_component
-2 把 index.html 中的主题 CSS 链接改为 `bower_component/SnowFallen/style.css`
-3 在页面末尾添加一个 JavaScript 引用 `bower_component/SnowFallen/js/functions.js` ，注意要加在所有原有的 JavaScript 引用之后
-4 编辑设置项 airpubConfigs.theme = SnowFallen
+1. 把主题文件夹放进 bower_component
+2. 把 index.html 中的主题 CSS 链接改为 `bower_component/SnowFallen/style.css`
+3. 在文档末尾添加一个 JavaScript 引用 `bower_component/SnowFallen/js/functions.js`，注意要加在所有原有的 JavaScript 引用之后
+4. 编辑设置项 airpubConfigs.theme = "SnowFallen";

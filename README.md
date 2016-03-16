@@ -11,6 +11,10 @@
 3. 在文档末尾添加一个 JavaScript 引用 `bower_component/SnowFallen/js/functions.js`，注意要加在所有原有的 JavaScript 引用之后
 4. 编辑设置项 airpubConfigs.theme = "SnowFallen";
 
+## 注意事项
+
+请使用从 GitHub 拉取代码安装的最新版 Airpub，使用其他版本可能会造成诸如布局错位、无法使用多说评论等奇怪的错误。
+
 ## 授权协议
 
 本作品基于《GNU通用公共许可协议 第三版》发布。

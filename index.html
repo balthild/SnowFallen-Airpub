@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="airpub" ng-controller="global">
+	<head ng-controller="meta">
+		<base href="/" />
+		<meta charset="UTF-8">
+		<title ng-bind="title"></title>
+		<meta name="fragment" content="!" />
+		<meta name="description" content="{{description}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- dependencies stylesheets and scripts -->
+		<link rel="stylesheet" href="http://cdn.airpub.io/0.4.0-unstable/airpub-dependencies.min.css?v=0.4.0_2">
+		<script src="http://cdn.airpub.io/0.4.0-unstable/airpub-dependencies.min.js?v=0.4.0_2"></script>
+		<!-- default theme: chill -->
+		<link rel="stylesheet" href="themes/SnowFallen/style.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="themes/SnowFallen/favicon.ico" />
+	</head>
+	<body ng-controller="base" ng-class="state.current.controller">
+		<div ui-view="layout"></div>
+		<script>
+		var airpubConfigs = {
+			name: 'Airpub', // blog name
+			description: '轻如蝉翼的写作工具', // just a little description
+			url: 'http://airpub.balthild.com', // blog uri
+			theme: 'SnowFallen', // current theme
+			themePath: 'themes', // theme Path
+			staticPath: 'http://cdn.airpub.io/', // static file path
+			upyun: { // for images upload
+				// bucket: '',
+				// form_api_secret: ''
+			}
+		}
+		var duoshuoQuery = {
+			short_name: 'apdev' // for backend service
+		};
+		</script>
+		<script src="http://static.duoshuo.com/embed.js"></script>
+		<script src="http://cdn.airpub.io/0.4.0-unstable/airpub.min.js?v=0.4.0_2"></script>
+		<script src="themes/SnowFallen/js/functions.js"></script>
+	</body>
+</html>

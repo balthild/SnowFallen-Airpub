@@ -1,0 +1,52 @@
+{
+  "name": "airpub",
+  "version": "0.4.0",
+  "homepage": "https://github.com/duoshuo/airpub",
+  "authors": [
+    "Guo Yu <o.u.turing@gmail.com>"
+  ],
+  "description": "a pure front-end blog engine powered by duoshuo API",
+  "main": "index.html",
+  "keywords": [
+    "blog",
+    "cms",
+    "angular",
+    "airpub",
+    "airpress",
+    "wordpress",
+    "blog engine",
+    "blog platform",
+    "article"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "editor",
+    "thumb"
+  ],
+  "dependencies": {
+    "angular": "1.3.8",
+    "angular-sanitize": "~1.3.8",
+    "angular-ui-router": "0.2.13",
+    "bootstrap": "3.3.1",
+    "nprogress": "~0.1.6",
+    "node-uuid": "~1.4.1",
+    "upyun": "0.4.0",
+    "duoshuo": "0.5.2",
+    "marked": "~0.3.2",
+    "highlightjs": "~8.0.0",
+    "chill": "0.3.0",
+    "ninja": "0.1.1",
+    "oclazyload": "~0.5.2"
+  },
+  "devDependencies": {
+    "debug": "git@github.com:visionmedia/debug.git"
+  },
+  "resolutions": {
+    "angular": "1.3.8"
+  }
+}
